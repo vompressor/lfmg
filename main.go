@@ -16,7 +16,7 @@ func main() {
 	var showInfoWithBody = false
 
 	app := &cli.App{
-		Version: "v1.0.1",
+		Version: "v1.0.2",
 
 		Name:  appName,
 		Usage: "Set \"LICENSE\" your project!",

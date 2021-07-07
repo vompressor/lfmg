@@ -44,7 +44,7 @@ func main() {
 			{
 				Name:      "generate",
 				Aliases:   []string{"gen", "g"},
-				Usage:     "generate \"LICENSE\".",
+				Usage:     "generate \"LICENSE\"",
 				ArgsUsage: "[license key]",
 				HideHelp:  true,
 				Action: func(c *cli.Context) error {

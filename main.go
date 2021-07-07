@@ -15,8 +15,11 @@ func main() {
 
 	var showInfoWithBody = false
 
+	var owner string
+	var year string
+
 	app := &cli.App{
-		Version: "v1.0.2",
+		Version: "v1.1.2",
 
 		Name:  appName,
 		Usage: "Set \"LICENSE\" your project!",
@@ -56,7 +59,7 @@ func main() {
 
 					gp := filepath.Join(path, "LICENSE")
 
-					err := license_generator.WriteLicenseBodyToPath(license, gp)
+					err := license_generator.WriteLicenseBodyToPath(license, gp, year, owner)
 
 					if err != nil {
 						println(err.Error())
@@ -81,6 +84,22 @@ func main() {
 						DefaultText: "working directory",
 						Usage:       "`PATH` to save \"LICENSE\"",
 						Destination: &path,
+					},
+					&cli.StringFlag{
+						Name:        "year",
+						Aliases:     []string{"y"},
+						Value:       "",
+						DefaultText: "not set",
+						Usage:       "set `year`",
+						Destination: &year,
+					},
+					&cli.StringFlag{
+						Name:        "owner",
+						Aliases:     []string{"o"},
+						Value:       "",
+						DefaultText: "not set",
+						Usage:       "set `owner`",
+						Destination: &owner,
 					},
 				},
 			},

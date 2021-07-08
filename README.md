@@ -1,6 +1,15 @@
 # lfmg
 lfmg is LICENSE file generator based on github api.   
 
+## install
+```
+$ wget https://github.com/vompressor/lfmg/releases/download/v1.1.2/lfmg
+$ chown 744 lfmg
+or
+$ curl -O https://github.com/vompressor/lfmg/releases/download/v1.1.2/lfmg
+$ chown 744 lfmg
+```
+
 ## command
 ```
    list, l           show "LICENSE" list

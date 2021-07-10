@@ -1,0 +1,23 @@
+name: lfmg
+version: "1.0.0"
+summary: Create LICENSE file in your project!!
+description: |
+  Create LICENSE file in your project!!
+  https://github.com/vompressor/lfmg
+
+grade: stable
+confinement: strict
+base: core18
+
+parts:
+  lfmg:
+    plugin: go
+    go-importpath: github.com/vompressor/lfmg
+    source: https://github.com/vompressor/lfmg.git
+    source-type: git
+    build-packages:
+      - gcc
+
+apps:
+  lfmg:
+    command: bin/lfmg

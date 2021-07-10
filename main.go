@@ -48,7 +48,7 @@ func main() {
 	}
 
 	app := &cli.App{
-		Version: "alpha2",
+		Version: "1.3.0",
 
 		Name:  appName,
 		Usage: "Set \"LICENSE\" your project!",

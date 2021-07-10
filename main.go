@@ -48,7 +48,7 @@ func main() {
 	}
 
 	app := &cli.App{
-		Version: "v1.2.0",
+		Version: "alpha2",
 
 		Name:  appName,
 		Usage: "Set \"LICENSE\" your project!",
@@ -65,7 +65,7 @@ func main() {
 				Action: func(c *cli.Context) error {
 					err := license_generator.PrintLicenseList()
 					if err != nil {
-						println(err)
+						println(err.Error())
 						os.Exit(1)
 					}
 					os.Exit(0)

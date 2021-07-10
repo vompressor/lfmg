@@ -1,5 +1,5 @@
 name: lfmg
-version: "1.2.0"
+version: "alpha2"
 summary: Create LICENSE file in your project!!
 description: |
   Create LICENSE file in your project!!
@@ -13,7 +13,7 @@ parts:
   lfmg:
     plugin: go
     go-importpath: github.com/vompressor/lfmg
-    source: https://github.com/vompressor/lfmg.git
+    source: .
     source-type: git
     build-packages:
       - gcc

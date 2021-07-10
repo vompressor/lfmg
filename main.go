@@ -18,8 +18,37 @@ func main() {
 	var owner string
 	var year string
 
+	genLicense := func(c *cli.Context) error {
+		if c.NArg() == 0 {
+			println("input license key")
+			os.Exit(1)
+		} else if c.NArg() != 1 {
+			println("too many license key")
+			os.Exit(1)
+		}
+		var license = c.Args().First()
+
+		gp := filepath.Join(path, "LICENSE")
+
+		err := license_generator.WriteLicenseBodyToPath(license, gp, year, owner)
+
+		if err != nil {
+			println(err.Error())
+			os.Exit(1)
+		}
+		println("generated license " + license + " to " + gp)
+		println(`must modify year and creator
+		e.g. MIT License [3:15] and [3:22]
+		     Copyright (c) [year] [fullname]
+		                   ^      ^`)
+
+		// Gen license logic
+
+		return nil
+	}
+
 	app := &cli.App{
-		Version: "v1.1.3",
+		Version: "v1.2.0",
 
 		Name:  appName,
 		Usage: "Set \"LICENSE\" your project!",
@@ -34,7 +63,11 @@ func main() {
 				HideHelp:  true,
 				UsageText: appName + " list",
 				Action: func(c *cli.Context) error {
-					license_generator.PrintLicenseList()
+					err := license_generator.PrintLicenseList()
+					if err != nil {
+						println(err)
+						os.Exit(1)
+					}
 					os.Exit(0)
 					return nil
 				},
@@ -47,34 +80,7 @@ func main() {
 				Usage:     "generate \"LICENSE\"",
 				ArgsUsage: "[license key]",
 				HideHelp:  true,
-				Action: func(c *cli.Context) error {
-					if c.NArg() == 0 {
-						println("input license key")
-						os.Exit(1)
-					} else if c.NArg() != 1 {
-						println("too many license key")
-						os.Exit(1)
-					}
-					var license = c.Args().First()
-
-					gp := filepath.Join(path, "LICENSE")
-
-					err := license_generator.WriteLicenseBodyToPath(license, gp, year, owner)
-
-					if err != nil {
-						println(err.Error())
-						os.Exit(1)
-					}
-					println("generated license " + license + " to " + gp)
-					println("must modify year and creator")
-					println("e.g. MIT License [3:15] and [3:22]")
-					println("     Copyright (c) [year] [fullname]")
-					println("                   ^      ^")
-
-					// Gen license logic
-
-					return nil
-				},
+				Action:    genLicense,
 
 				Flags: []cli.Flag{
 					&cli.StringFlag{

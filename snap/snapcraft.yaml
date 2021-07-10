@@ -5,7 +5,7 @@ description: |
   Create LICENSE file in your project!!
   https://github.com/vompressor/lfmg
 grade: stable
-confinement: classic
+confinement: strict
 base: core18
 
 parts:
@@ -20,3 +20,6 @@ parts:
 apps:
   lfmg:
     command: bin/lfmg
+    plugs:
+      - home
+      - network

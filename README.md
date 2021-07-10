@@ -1,3 +1,6 @@
+[![lfmg](https://snapcraft.io/lfmg/badge.svg)](https://snapcraft.io/lfmg)
+[![lfmg](https://snapcraft.io/lfmg/trending.svg?name=0)](https://snapcraft.io/lfmg)   
+
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/lfmg)   
 
 # lfmg

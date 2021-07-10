@@ -1,4 +1,5 @@
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/lfmg)
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/lfmg)   
+Sorry it still in development mode
 
 # lfmg
 lfmg is LICENSE file generator based on github api.   
@@ -76,5 +77,7 @@ limitations: liability warranty
 https://github.com/vompressor/license_generator
 
 ## TODO::
-file permission
-err message
+file permission   
+err message   
+bash hint   
+move server github api to my api server   

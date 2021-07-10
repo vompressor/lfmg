@@ -19,7 +19,7 @@ func main() {
 	var year string
 
 	app := &cli.App{
-		Version: "v1.1.2",
+		Version: "v1.1.3",
 
 		Name:  appName,
 		Usage: "Set \"LICENSE\" your project!",

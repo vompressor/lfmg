@@ -1,17 +1,15 @@
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/lfmg)   
-Sorry it still in development mode
 
 # lfmg
 lfmg is LICENSE file generator based on github api.   
 
 ## install
 ```
-$ wget https://github.com/vompressor/lfmg/releases/download/v1.1.2/lfmg
-$ chown 744 lfmg
-or
-$ curl -O https://github.com/vompressor/lfmg/releases/download/v1.1.2/lfmg
-$ chown 744 lfmg
+$ snap install lfmg
 ```
+
+## test
+It works fine in `Ubuntu 18.04`.
 
 ## command
 ```

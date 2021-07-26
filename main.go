@@ -28,6 +28,14 @@ func main() {
 		}
 		var license = c.Args().First()
 
+		if license == "README.md" ||
+			license == "readme" ||
+			license == "r" ||
+			license == "read" ||
+			license == "readme.md" {
+			return license_generator.CreateREADMEmd(path)
+		}
+
 		gp := filepath.Join(path, "LICENSE")
 
 		err := license_generator.WriteLicenseBodyToPath(license, gp, year, owner)
@@ -48,7 +56,7 @@ func main() {
 	}
 
 	app := &cli.App{
-		Version: "1.3.0",
+		Version: "1.3.1",
 
 		Name:  appName,
 		Usage: "Set \"LICENSE\" your project!",
@@ -73,12 +81,12 @@ func main() {
 				},
 			},
 
-			// generate "LICENSE"
+			// generate "LICENSE" or "README.md"
 			{
 				Name:      "generate",
 				Aliases:   []string{"gen", "g"},
-				Usage:     "generate \"LICENSE\"",
-				ArgsUsage: "[license key]",
+				Usage:     "generate \"LICENSE\" or \"README.md\"",
+				ArgsUsage: "[\"license key\" or \"readme\"]",
 				HideHelp:  true,
 				Action:    genLicense,
 
@@ -88,7 +96,7 @@ func main() {
 						Aliases:     []string{"p"},
 						Value:       ".",
 						DefaultText: "working directory",
-						Usage:       "`PATH` to save \"LICENSE\"",
+						Usage:       "`PATH` to save \"LICENSE\" or \"README.md\"",
 						Destination: &path,
 					},
 					&cli.StringFlag{

@@ -82,3 +82,4 @@ file permission
 err message   
 bash hint   
 move server github api to my api server   
+~~README.md~~   

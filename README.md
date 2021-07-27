@@ -18,6 +18,7 @@ It works fine in `Ubuntu 18.04`.
 ```
    list, l           show "LICENSE" list
    generate, gen, g  generate "LICENSE".
+      read, readme, r genetate "README.md"
    info, i           get license info
    body, b           show "LICENSE" content
    cache, c          cache control
@@ -28,6 +29,11 @@ It works fine in `Ubuntu 18.04`.
 create mit "LICENSE" on working directory
 ```
 $ lfmg g -y 2021 -o vompressor mit
+```
+
+create "README.md on working directory
+```
+$ lfmg g r
 ```
 
 $ create Apache-2.0 "LICENSE" on "~/project/LICENSE"

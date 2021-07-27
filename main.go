@@ -10,6 +10,7 @@ import (
 
 func main() {
 	var appName = "lfmg"
+	var version = "1.3.2"
 
 	var path string
 
@@ -56,7 +57,7 @@ func main() {
 	}
 
 	app := &cli.App{
-		Version: "1.3.1",
+		Version: version,
 
 		Name:  appName,
 		Usage: "Set \"LICENSE\" your project!",

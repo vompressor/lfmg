@@ -4,5 +4,5 @@ go 1.16
 
 require (
 	github.com/urfave/cli/v2 v2.3.0
-	github.com/vompressor/license_generator v1.2.1
+	github.com/vompressor/license_generator v1.2.2
 )

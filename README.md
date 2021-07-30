@@ -75,9 +75,22 @@ Permissions of this strong copyleft license are conditioned on making available 
 implementation:
 Create a text file (typically named COPYING, as per GNU conventions) in the root of your source code and copy the text of the license into the file.
 
-permissions: commercial-use modifications distribution patent-use private-use
-conditions: include-copyright document-changes disclose-source same-license
-limitations: liability warranty
+permissions:
+ ✓ commercial-use
+ ✓ modifications
+ ✓ distribution
+ ✓ patent-use
+ ✓ private-use
+
+limitations:
+ ✗ liability
+ ✗ warranty
+
+conditions:
+ 🛈 include-copyright
+ 🛈 document-changes
+ 🛈 disclose-source
+ 🛈 same-license
 ```
 
 ## library

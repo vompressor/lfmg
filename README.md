@@ -12,7 +12,7 @@ $ snap install lfmg
 ```
 
 ## test
-It works fine in `Ubuntu 18.04`.
+It works fine in `Ubuntu 18.04` and `Ubuntu 20.04`.   
 
 ## command
 ```
